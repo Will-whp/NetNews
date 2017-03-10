@@ -7,6 +7,7 @@
 //
 
 #import "VVNewsController.h"
+#import "VVNetworkTools.h"
 
 @interface VVNewsController ()
 
@@ -23,6 +24,31 @@
 - (void)setUrlStr:(NSString *)urlStr {
     
     _urlStr = urlStr;
+    
+    NSLog(@"%@",_urlStr);
+
+    [[VVNetworkTools shardTools] requestWithType:GET andUrlStr:urlStr andParams:nil andSuccess:^(id responseObject) {
+        
+        //NSLog(@"%@", responseObject);
+        
+        NSDictionary *dic = (NSDictionary*)responseObject;
+        
+        NSString *key = dic.allKeys.firstObject;
+        
+        NSLog(@"%@",key);
+        
+        //通过key获取新闻的数组字典
+        NSArray *dicArray = [dic objectForKey:key];
+        
+       // NSLog(@"%@",dicArray);
+        
+        
+        
+    } andFailture:^(NSError *error) {
+        
+         NSLog(@"%@", error);
+    }];
+    
     
     
 }
