@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		130868E0BCCC30021226D18A /* libPods-网易新闻.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 102D975851FB11828CE4061D /* libPods-网易新闻.a */; };
+		B2833FF01E701D2300C5DE57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2833FEF1E701D2300C5DE57 /* main.m */; };
+		B2833FF31E701D2300C5DE57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2833FF21E701D2300C5DE57 /* AppDelegate.m */; };
+		B2833FF91E701D2300C5DE57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2833FF71E701D2300C5DE57 /* Main.storyboard */; };
+		B2833FFB1E701D2300C5DE57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2833FFA1E701D2300C5DE57 /* Assets.xcassets */; };
+		B2833FFE1E701D2300C5DE57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2833FFC1E701D2300C5DE57 /* LaunchScreen.storyboard */; };
+		B29AE2B91E728E8C00331A60 /* VVHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE2B81E728E8C00331A60 /* VVHomeController.m */; };
+		B29AE2BB1E72904400331A60 /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = B29AE2BA1E72904400331A60 /* topic_news.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		102D975851FB11828CE4061D /* libPods-网易新闻.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-网易新闻.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2833FEB1E701D2300C5DE57 /* 网易新闻.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "网易新闻.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2833FEF1E701D2300C5DE57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B2833FF11E701D2300C5DE57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B2833FF21E701D2300C5DE57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B2833FF81E701D2300C5DE57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B2833FFA1E701D2300C5DE57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2833FFD1E701D2300C5DE57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B2833FFF1E701D2300C5DE57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29AE2B71E728E8C00331A60 /* VVHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVHomeController.h; sourceTree = "<group>"; };
+		B29AE2B81E728E8C00331A60 /* VVHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVHomeController.m; sourceTree = "<group>"; };
+		B29AE2BA1E72904400331A60 /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
+		D2E6A4505B11F05FE5C82E4F /* Pods-网易新闻.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网易新闻.release.xcconfig"; path = "Pods/Target Support Files/Pods-网易新闻/Pods-网易新闻.release.xcconfig"; sourceTree = "<group>"; };
+		E232B835737E6F59624304F6 /* Pods-网易新闻.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网易新闻.debug.xcconfig"; path = "Pods/Target Support Files/Pods-网易新闻/Pods-网易新闻.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2833FE81E701D2300C5DE57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				130868E0BCCC30021226D18A /* libPods-网易新闻.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		804FACA6C00262708FA18B20 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E232B835737E6F59624304F6 /* Pods-网易新闻.debug.xcconfig */,
+				D2E6A4505B11F05FE5C82E4F /* Pods-网易新闻.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B2833FE21E701D2300C5DE57 = {
+			isa = PBXGroup;
+			children = (
+				B2833FED1E701D2300C5DE57 /* 网易新闻 */,
+				B2833FEC1E701D2300C5DE57 /* Products */,
+				804FACA6C00262708FA18B20 /* Pods */,
+				CD40C8CC39CDF1A58738B9FF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B2833FEC1E701D2300C5DE57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2833FEB1E701D2300C5DE57 /* 网易新闻.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2833FED1E701D2300C5DE57 /* 网易新闻 */ = {
+			isa = PBXGroup;
+			children = (
+				B29AE2B11E72878500331A60 /* Classes */,
+				B2833FF11E701D2300C5DE57 /* AppDelegate.h */,
+				B2833FF21E701D2300C5DE57 /* AppDelegate.m */,
+				B2833FF71E701D2300C5DE57 /* Main.storyboard */,
+				B2833FFA1E701D2300C5DE57 /* Assets.xcassets */,
+				B2833FFC1E701D2300C5DE57 /* LaunchScreen.storyboard */,
+				B2833FFF1E701D2300C5DE57 /* Info.plist */,
+				B29AE2BA1E72904400331A60 /* topic_news.json */,
+				B2833FEE1E701D2300C5DE57 /* Supporting Files */,
+			);
+			path = "网易新闻";
+			sourceTree = "<group>";
+		};
+		B2833FEE1E701D2300C5DE57 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2833FEF1E701D2300C5DE57 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B29AE2B11E72878500331A60 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B29AE2B21E72878500331A60 /* Home */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B29AE2B21E72878500331A60 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B29AE2B31E72878500331A60 /* Controller */,
+				B29AE2B41E72878500331A60 /* Model */,
+				B29AE2B51E72878500331A60 /* Other */,
+				B29AE2B61E72878500331A60 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B29AE2B31E72878500331A60 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B29AE2B71E728E8C00331A60 /* VVHomeController.h */,
+				B29AE2B81E728E8C00331A60 /* VVHomeController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B29AE2B41E72878500331A60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B29AE2B51E72878500331A60 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		B29AE2B61E72878500331A60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CD40C8CC39CDF1A58738B9FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				102D975851FB11828CE4061D /* libPods-网易新闻.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2833FEA1E701D2300C5DE57 /* 网易新闻 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B28340021E701D2300C5DE57 /* Build configuration list for PBXNativeTarget "网易新闻" */;
+			buildPhases = (
+				E0B0E5A0DD3F1AF19087ECE9 /* [CP] Check Pods Manifest.lock */,
+				B2833FE71E701D2300C5DE57 /* Sources */,
+				B2833FE81E701D2300C5DE57 /* Frameworks */,
+				B2833FE91E701D2300C5DE57 /* Resources */,
+				99FBC3ACDCADCE053CDD3EAB /* [CP] Embed Pods Frameworks */,
+				7B98F778982DB4C6DA06433A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "网易新闻";
+			productName = "网易新闻";
+			productReference = B2833FEB1E701D2300C5DE57 /* 网易新闻.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2833FE31E701D2300C5DE57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Will Wang";
+				TargetAttributes = {
+					B2833FEA1E701D2300C5DE57 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B2833FE61E701D2300C5DE57 /* Build configuration list for PBXProject "网易新闻" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2833FE21E701D2300C5DE57;
+			productRefGroup = B2833FEC1E701D2300C5DE57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2833FEA1E701D2300C5DE57 /* 网易新闻 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2833FE91E701D2300C5DE57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2833FFE1E701D2300C5DE57 /* LaunchScreen.storyboard in Resources */,
+				B2833FFB1E701D2300C5DE57 /* Assets.xcassets in Resources */,
+				B29AE2BB1E72904400331A60 /* topic_news.json in Resources */,
+				B2833FF91E701D2300C5DE57 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B98F778982DB4C6DA06433A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-网易新闻/Pods-网易新闻-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99FBC3ACDCADCE053CDD3EAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-网易新闻/Pods-网易新闻-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0B0E5A0DD3F1AF19087ECE9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2833FE71E701D2300C5DE57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2833FF31E701D2300C5DE57 /* AppDelegate.m in Sources */,
+				B2833FF01E701D2300C5DE57 /* main.m in Sources */,
+				B29AE2B91E728E8C00331A60 /* VVHomeController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B2833FF71E701D2300C5DE57 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2833FF81E701D2300C5DE57 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B2833FFC1E701D2300C5DE57 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2833FFD1E701D2300C5DE57 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B28340001E701D2300C5DE57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B28340011E701D2300C5DE57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B28340031E701D2300C5DE57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E232B835737E6F59624304F6 /* Pods-网易新闻.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "网易新闻/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "will.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B28340041E701D2300C5DE57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2E6A4505B11F05FE5C82E4F /* Pods-网易新闻.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "网易新闻/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "will.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2833FE61E701D2300C5DE57 /* Build configuration list for PBXProject "网易新闻" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B28340001E701D2300C5DE57 /* Debug */,
+				B28340011E701D2300C5DE57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B28340021E701D2300C5DE57 /* Build configuration list for PBXNativeTarget "网易新闻" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B28340031E701D2300C5DE57 /* Debug */,
+				B28340041E701D2300C5DE57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2833FE31E701D2300C5DE57 /* Project object */;
+}

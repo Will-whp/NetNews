@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ca1-fh-yTQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="nHM-du-1JC">
+            <objects>
+                <navigationController id="ca1-fh-yTQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2cg-o9-P31">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="si1-my-G0T" kind="relationship" relationship="rootViewController" id="ghi-Hu-Ahr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="54Z-Yc-Uyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-760" y="71"/>
+        </scene>
+        <!--网易新闻-->
+        <scene sceneID="ZY5-7d-c4M">
+            <objects>
+                <viewController id="si1-my-G0T" customClass="VVHomeController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q6D-d9-1Xi"/>
+                        <viewControllerLayoutGuide type="bottom" id="deT-Fq-aL5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f8N-GP-6S0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ACy-U4-27w">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="wCP-rg-8uH"/>
+                                </constraints>
+                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3ob-SV-Ngx">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zof-o1-Ib2">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FAn-bw-blm">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3ob-SV-Ngx" firstAttribute="top" secondItem="ACy-U4-27w" secondAttribute="bottom" id="BF9-uB-IXE"/>
+                            <constraint firstItem="ACy-U4-27w" firstAttribute="top" secondItem="q6D-d9-1Xi" secondAttribute="bottom" id="RyL-4B-ySb"/>
+                            <constraint firstItem="ACy-U4-27w" firstAttribute="leading" secondItem="f8N-GP-6S0" secondAttribute="leading" id="ShQ-tc-y7o"/>
+                            <constraint firstAttribute="trailing" secondItem="ACy-U4-27w" secondAttribute="trailing" id="VVl-Dd-sni"/>
+                            <constraint firstItem="deT-Fq-aL5" firstAttribute="top" secondItem="3ob-SV-Ngx" secondAttribute="bottom" id="ZIe-NZ-jdK"/>
+                            <constraint firstAttribute="trailing" secondItem="3ob-SV-Ngx" secondAttribute="trailing" id="hNa-Pe-EkZ"/>
+                            <constraint firstItem="3ob-SV-Ngx" firstAttribute="leading" secondItem="f8N-GP-6S0" secondAttribute="leading" id="ihE-Ok-H6M"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="网易新闻" id="HBa-hu-Qwd"/>
+                    <connections>
+                        <outlet property="channelScrollView" destination="ACy-U4-27w" id="VdT-7N-O8A"/>
+                        <outlet property="flowLayout" destination="zof-o1-Ib2" id="r8i-Vl-es3"/>
+                        <outlet property="newsCollectionView" destination="3ob-SV-Ngx" id="bpe-Bj-KSL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cHu-Bi-kLj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199" y="86"/>
+        </scene>
+    </scenes>
+</document>
