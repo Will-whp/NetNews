@@ -10,12 +10,16 @@
 #import "VVChannelModel.h"
 #import "VVChannelLable.h"
 
-@interface VVHomeController ()
+@interface VVHomeController () <UICollectionViewDelegate,UICollectionViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UIScrollView *channelScrollView;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *newsCollectionView;
 
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *flowLayout;
+
+//频道数据源
+@property (nonatomic,strong) NSArray *channelModelData;
 
 @end
 
@@ -28,13 +32,13 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     [self requestChannelData];
+    [self setupNewsCollectionView];
     
 }
 
 - (void)requestChannelData {
     
-    
-    NSArray *modelData = [VVChannelModel getChannelModelData];
+    self.channelModelData = [VVChannelModel getChannelModelData];
     
 //    for (VVChannelModel *model in modelData) {
 //        
@@ -46,10 +50,10 @@
     CGFloat lableWidth = 80;
     CGFloat lableHeight = 44;
     
-    for (int i = 0; i < modelData.count; i++) {
+    for (int i = 0; i < self.channelModelData.count; i++) {
         
         //获取对应的模型数据
-        VVChannelModel *model = modelData[i];
+        VVChannelModel *model = self.channelModelData[i];
         
         //创建lable
         VVChannelLable *channelLable = [[VVChannelLable alloc]initWithFrame:CGRectMake(i * lableWidth, 0, lableWidth, lableHeight)];
@@ -67,13 +71,40 @@
     }
     
     //设置scrollView的滚动范围
-    self.channelScrollView.contentSize = CGSizeMake(lableWidth * modelData.count, 0);
+    self.channelScrollView.contentSize = CGSizeMake(lableWidth * self.channelModelData.count, 0);
     
     //取消滚动条
     self.channelScrollView.showsVerticalScrollIndicator = NO;
     self.channelScrollView.showsHorizontalScrollIndicator = NO;
     
+}
+
+//设置新闻视图
+- (void)setupNewsCollectionView {
     
+    //遵守数据源和代理
+    self.newsCollectionView.delegate = self;
+    self.newsCollectionView.dataSource = self;
+    
+    //设置每个item的大小
+    self.flowLayout.itemSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height - 64- 44);
+    
+    //设置间距
+    self.flowLayout.minimumLineSpacing = 0; //垂直间距
+    self.flowLayout.minimumInteritemSpacing = 0; //水平间距
+    
+    //设置滚动方向
+    self.flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    
+    //取消弹簧效果
+    self.newsCollectionView.bounces = NO;
+    
+    //去掉滚动条
+    self.newsCollectionView.showsHorizontalScrollIndicator = NO;
+    self.newsCollectionView.showsVerticalScrollIndicator = NO;
+    
+    //设置分页效果
+    self.newsCollectionView.pagingEnabled = YES;
     
     
     
@@ -81,6 +112,22 @@
     
 }
 
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+    return self.channelModelData.count;
+    
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"newsCell" forIndexPath:indexPath];
+    
+    //设置随机色
+    cell.backgroundColor = [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1];
+    
+    return cell;
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
