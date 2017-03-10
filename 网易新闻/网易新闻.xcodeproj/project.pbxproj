@@ -17,6 +17,8 @@
 		B29AE2BB1E72904400331A60 /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = B29AE2BA1E72904400331A60 /* topic_news.json */; };
 		B29AE2BE1E72C41300331A60 /* VVChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE2BD1E72C41300331A60 /* VVChannelModel.m */; };
 		B29AE2C11E72CF8700331A60 /* VVChannelLable.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE2C01E72CF8700331A60 /* VVChannelLable.m */; };
+		B29AE2C41E72DE4900331A60 /* VVNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE2C31E72DE4900331A60 /* VVNewsController.m */; };
+		B29AE2C71E72DFE500331A60 /* VVNewsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE2C61E72DFE500331A60 /* VVNewsCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,10 @@
 		B29AE2BD1E72C41300331A60 /* VVChannelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVChannelModel.m; sourceTree = "<group>"; };
 		B29AE2BF1E72CF8700331A60 /* VVChannelLable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVChannelLable.h; sourceTree = "<group>"; };
 		B29AE2C01E72CF8700331A60 /* VVChannelLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVChannelLable.m; sourceTree = "<group>"; };
+		B29AE2C21E72DE4900331A60 /* VVNewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVNewsController.h; sourceTree = "<group>"; };
+		B29AE2C31E72DE4900331A60 /* VVNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVNewsController.m; sourceTree = "<group>"; };
+		B29AE2C51E72DFE500331A60 /* VVNewsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVNewsCollectionViewCell.h; sourceTree = "<group>"; };
+		B29AE2C61E72DFE500331A60 /* VVNewsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVNewsCollectionViewCell.m; sourceTree = "<group>"; };
 		D2E6A4505B11F05FE5C82E4F /* Pods-网易新闻.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网易新闻.release.xcconfig"; path = "Pods/Target Support Files/Pods-网易新闻/Pods-网易新闻.release.xcconfig"; sourceTree = "<group>"; };
 		E232B835737E6F59624304F6 /* Pods-网易新闻.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网易新闻.debug.xcconfig"; path = "Pods/Target Support Files/Pods-网易新闻/Pods-网易新闻.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +133,8 @@
 			children = (
 				B29AE2B71E728E8C00331A60 /* VVHomeController.h */,
 				B29AE2B81E728E8C00331A60 /* VVHomeController.m */,
+				B29AE2C21E72DE4900331A60 /* VVNewsController.h */,
+				B29AE2C31E72DE4900331A60 /* VVNewsController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -152,6 +160,8 @@
 			children = (
 				B29AE2BF1E72CF8700331A60 /* VVChannelLable.h */,
 				B29AE2C01E72CF8700331A60 /* VVChannelLable.m */,
+				B29AE2C51E72DFE500331A60 /* VVNewsCollectionViewCell.h */,
+				B29AE2C61E72DFE500331A60 /* VVNewsCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -288,6 +298,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B29AE2C71E72DFE500331A60 /* VVNewsCollectionViewCell.m in Sources */,
+				B29AE2C41E72DE4900331A60 /* VVNewsController.m in Sources */,
 				B2833FF31E701D2300C5DE57 /* AppDelegate.m in Sources */,
 				B29AE2BE1E72C41300331A60 /* VVChannelModel.m in Sources */,
 				B29AE2C11E72CF8700331A60 /* VVChannelLable.m in Sources */,

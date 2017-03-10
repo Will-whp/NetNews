@@ -106,7 +106,8 @@
     //设置分页效果
     self.newsCollectionView.pagingEnabled = YES;
     
-    
+    //ios10提供了一个预加载的功能  会把下一个将要显示的cell提前准备好
+    self.newsCollectionView.prefetchingEnabled = YES;
     
     
     
@@ -122,10 +123,7 @@
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"newsCell" forIndexPath:indexPath];
     
-    //设置随机色
-    cell.backgroundColor = [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1];
-    
-    return cell;
+        return cell;
 
 }
 
