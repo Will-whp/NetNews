@@ -7,6 +7,7 @@
 //
 
 #import "VVHomeController.h"
+#import "VVChannelModel.h"
 
 @interface VVHomeController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *channelScrollView;
@@ -22,10 +23,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
+    [self requestChannelData];
     
+}
+
+- (void)requestChannelData {
+    
+    
+    NSArray *modelData = [VVChannelModel getChannelModelData];
+    
+    for (VVChannelModel *model in modelData) {
+        
+        NSLog(@"%@",model);
+    }
     
     
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
