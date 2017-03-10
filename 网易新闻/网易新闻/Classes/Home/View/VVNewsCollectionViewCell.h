@@ -10,4 +10,6 @@
 
 @interface VVNewsCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic,copy) NSString *urlStr;
+
 @end

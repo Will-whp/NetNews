@@ -9,6 +9,8 @@
 #import "VVHomeController.h"
 #import "VVChannelModel.h"
 #import "VVChannelLable.h"
+#import "VVNetworkTools.h"
+#import "VVNewsCollectionViewCell.h"
 
 @interface VVHomeController () <UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -121,9 +123,19 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"newsCell" forIndexPath:indexPath];
+    VVNewsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"newsCell" forIndexPath:indexPath];
     
-        return cell;
+    //获取指定频道的模型
+    VVChannelModel *model = self.channelModelData[indexPath.item];
+    
+    //获取id
+    NSString *tid = model.tid;
+    
+    NSString *urlStr = [NSString stringWithFormat:@"%@/0-20.html",tid];
+    
+    cell.urlStr = urlStr;
+    
+    return cell;
 
 }
 
