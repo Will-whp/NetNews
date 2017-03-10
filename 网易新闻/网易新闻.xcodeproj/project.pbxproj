@@ -19,6 +19,7 @@
 		B29AE2C11E72CF8700331A60 /* VVChannelLable.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE2C01E72CF8700331A60 /* VVChannelLable.m */; };
 		B29AE2C41E72DE4900331A60 /* VVNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE2C31E72DE4900331A60 /* VVNewsController.m */; };
 		B29AE2C71E72DFE500331A60 /* VVNewsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE2C61E72DFE500331A60 /* VVNewsCollectionViewCell.m */; };
+		B29AE2D11E72E81600331A60 /* VVNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AE2D01E72E81600331A60 /* VVNetworkTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		B29AE2C31E72DE4900331A60 /* VVNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVNewsController.m; sourceTree = "<group>"; };
 		B29AE2C51E72DFE500331A60 /* VVNewsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVNewsCollectionViewCell.h; sourceTree = "<group>"; };
 		B29AE2C61E72DFE500331A60 /* VVNewsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVNewsCollectionViewCell.m; sourceTree = "<group>"; };
+		B29AE2CF1E72E81600331A60 /* VVNetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVNetworkTools.h; sourceTree = "<group>"; };
+		B29AE2D01E72E81600331A60 /* VVNetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVNetworkTools.m; sourceTree = "<group>"; };
 		D2E6A4505B11F05FE5C82E4F /* Pods-网易新闻.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网易新闻.release.xcconfig"; path = "Pods/Target Support Files/Pods-网易新闻/Pods-网易新闻.release.xcconfig"; sourceTree = "<group>"; };
 		E232B835737E6F59624304F6 /* Pods-网易新闻.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网易新闻.debug.xcconfig"; path = "Pods/Target Support Files/Pods-网易新闻/Pods-网易新闻.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +115,7 @@
 		B29AE2B11E72878500331A60 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B29AE2CB1E72E73500331A60 /* Tools */,
 				B29AE2B21E72878500331A60 /* Home */,
 			);
 			path = Classes;
@@ -164,6 +168,15 @@
 				B29AE2C61E72DFE500331A60 /* VVNewsCollectionViewCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B29AE2CB1E72E73500331A60 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				B29AE2CF1E72E81600331A60 /* VVNetworkTools.h */,
+				B29AE2D01E72E81600331A60 /* VVNetworkTools.m */,
+			);
+			name = Tools;
 			sourceTree = "<group>";
 		};
 		CD40C8CC39CDF1A58738B9FF /* Frameworks */ = {
@@ -300,6 +313,7 @@
 			files = (
 				B29AE2C71E72DFE500331A60 /* VVNewsCollectionViewCell.m in Sources */,
 				B29AE2C41E72DE4900331A60 /* VVNewsController.m in Sources */,
+				B29AE2D11E72E81600331A60 /* VVNetworkTools.m in Sources */,
 				B2833FF31E701D2300C5DE57 /* AppDelegate.m in Sources */,
 				B29AE2BE1E72C41300331A60 /* VVChannelModel.m in Sources */,
 				B29AE2C11E72CF8700331A60 /* VVChannelLable.m in Sources */,
