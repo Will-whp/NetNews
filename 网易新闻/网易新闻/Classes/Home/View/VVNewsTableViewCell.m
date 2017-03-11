@@ -23,6 +23,9 @@
 ///阅读数
 @property (weak, nonatomic) IBOutlet UILabel *labReplyCount;
 
+///图标集合
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *iconImagesView;
+
 @end
 
 @implementation VVNewsTableViewCell
@@ -34,6 +37,7 @@
     self.imgsrcImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.imgsrcImageView.clipsToBounds = YES;
     
+ 
     
     
 }
@@ -48,6 +52,22 @@
     self.labTitle.text = newsModel.title;
     self.labSource.text = newsModel.source;
     self.labReplyCount.text = [NSString stringWithFormat:@"%zd",newsModel.replyCount];
+    
+    //遍历图片集合
+    for (int i = 0; i < self.iconImagesView.count; i ++) {
+        
+        //获取图片字典
+        NSDictionary *imageDic = newsModel.imgextra[i];
+        
+        //通过key获取图片地址
+        NSString *imagePath = [imageDic objectForKey:@"imgsrc"];
+   
+        //获取对应的imageView
+        UIImageView *imageView = self.iconImagesView[i];
+        
+        [imageView sd_setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
+    }
+    
     
 }
 

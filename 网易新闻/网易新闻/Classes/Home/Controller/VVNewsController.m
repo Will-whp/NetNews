@@ -31,6 +31,8 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"BaseCell" bundle:nil] forCellReuseIdentifier:@"baseCell"];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"BigImageCell" bundle:nil] forCellReuseIdentifier:@"bigImageCell"];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"ImagesCell" bundle:nil] forCellReuseIdentifier:@"imagesCell"];
 }
 
 - (void)setUrlStr:(NSString *)urlStr {
@@ -71,6 +73,11 @@
         
         cell = [tableView dequeueReusableCellWithIdentifier:@"bigImageCell" forIndexPath:indexPath];
         
+    } else if (model.imgextra.count == 2) {
+        
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:@"imagesCell" forIndexPath:indexPath];
+        
     } else {
         
         cell = [tableView dequeueReusableCellWithIdentifier:@"baseCell" forIndexPath:indexPath];
@@ -89,6 +96,10 @@
        
         //大图cell
         return 130;
+    } else if (model.imgextra.count == 2) {
+        
+        //多图cell
+        return 180;
     } else {
         
         //基本cell

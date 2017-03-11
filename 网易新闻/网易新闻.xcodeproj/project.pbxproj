@@ -12,6 +12,7 @@
 		B259D5841E741FBF00048AFB /* VVNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B259D5831E741FBF00048AFB /* VVNewsTableViewCell.m */; };
 		B259D5861E74212C00048AFB /* BaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B259D5851E74212C00048AFB /* BaseCell.xib */; };
 		B259D5881E742B8500048AFB /* BigImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B259D5871E742B8500048AFB /* BigImageCell.xib */; };
+		B259D58A1E74311E00048AFB /* ImagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B259D5891E74311E00048AFB /* ImagesCell.xib */; };
 		B2833FF01E701D2300C5DE57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2833FEF1E701D2300C5DE57 /* main.m */; };
 		B2833FF31E701D2300C5DE57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2833FF21E701D2300C5DE57 /* AppDelegate.m */; };
 		B2833FF91E701D2300C5DE57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2833FF71E701D2300C5DE57 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		B259D5831E741FBF00048AFB /* VVNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVNewsTableViewCell.m; sourceTree = "<group>"; };
 		B259D5851E74212C00048AFB /* BaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseCell.xib; sourceTree = "<group>"; };
 		B259D5871E742B8500048AFB /* BigImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BigImageCell.xib; sourceTree = "<group>"; };
+		B259D5891E74311E00048AFB /* ImagesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesCell.xib; sourceTree = "<group>"; };
 		B2833FEB1E701D2300C5DE57 /* 网易新闻.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "网易新闻.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2833FEF1E701D2300C5DE57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2833FF11E701D2300C5DE57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				B259D5831E741FBF00048AFB /* VVNewsTableViewCell.m */,
 				B259D5851E74212C00048AFB /* BaseCell.xib */,
 				B259D5871E742B8500048AFB /* BigImageCell.xib */,
+				B259D5891E74311E00048AFB /* ImagesCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B259D58A1E74311E00048AFB /* ImagesCell.xib in Resources */,
 				B2833FFE1E701D2300C5DE57 /* LaunchScreen.storyboard in Resources */,
 				B2833FFB1E701D2300C5DE57 /* Assets.xcassets in Resources */,
 				B259D5881E742B8500048AFB /* BigImageCell.xib in Resources */,
