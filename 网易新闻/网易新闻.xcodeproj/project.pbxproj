@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		130868E0BCCC30021226D18A /* libPods-网易新闻.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 102D975851FB11828CE4061D /* libPods-网易新闻.a */; };
+		B259D5811E737DD000048AFB /* VVNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B259D5801E737DD000048AFB /* VVNewsModel.m */; };
 		B2833FF01E701D2300C5DE57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2833FEF1E701D2300C5DE57 /* main.m */; };
 		B2833FF31E701D2300C5DE57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2833FF21E701D2300C5DE57 /* AppDelegate.m */; };
 		B2833FF91E701D2300C5DE57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2833FF71E701D2300C5DE57 /* Main.storyboard */; };
@@ -24,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		102D975851FB11828CE4061D /* libPods-网易新闻.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-网易新闻.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B259D57F1E737DD000048AFB /* VVNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVNewsModel.h; sourceTree = "<group>"; };
+		B259D5801E737DD000048AFB /* VVNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVNewsModel.m; sourceTree = "<group>"; };
 		B2833FEB1E701D2300C5DE57 /* 网易新闻.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "网易新闻.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2833FEF1E701D2300C5DE57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2833FF11E701D2300C5DE57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 			children = (
 				B29AE2BC1E72C41300331A60 /* VVChannelModel.h */,
 				B29AE2BD1E72C41300331A60 /* VVChannelModel.m */,
+				B259D57F1E737DD000048AFB /* VVNewsModel.h */,
+				B259D5801E737DD000048AFB /* VVNewsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 				B29AE2BE1E72C41300331A60 /* VVChannelModel.m in Sources */,
 				B29AE2C11E72CF8700331A60 /* VVChannelLable.m in Sources */,
 				B2833FF01E701D2300C5DE57 /* main.m in Sources */,
+				B259D5811E737DD000048AFB /* VVNewsModel.m in Sources */,
 				B29AE2B91E728E8C00331A60 /* VVHomeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

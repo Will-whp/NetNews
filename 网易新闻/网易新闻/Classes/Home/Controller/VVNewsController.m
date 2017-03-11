@@ -8,8 +8,11 @@
 
 #import "VVNewsController.h"
 #import "VVNetworkTools.h"
+#import "VVNewsModel.h"
 
 @interface VVNewsController ()
+
+@property (nonatomic,strong)NSArray *newsModelArray;
 
 @end
 
@@ -18,7 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupTableView];
     
+}
+
+- (void)setupTableView {
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
 }
 
 - (void)setUrlStr:(NSString *)urlStr {
@@ -27,60 +36,38 @@
     
     NSLog(@"%@",_urlStr);
 
-    [[VVNetworkTools shardTools] requestWithType:GET andUrlStr:urlStr andParams:nil andSuccess:^(id responseObject) {
+ 
+    [VVNewsModel requestNewsModelArrayWithURLStr:urlStr andCompletionBlock:^(NSArray *modelArray) {
         
-        //NSLog(@"%@", responseObject);
+        self.newsModelArray = modelArray;
         
-        NSDictionary *dic = (NSDictionary*)responseObject;
+        //获取到数据
+        [self.tableView reloadData];
         
-        NSString *key = dic.allKeys.firstObject;
-        
-        NSLog(@"%@",key);
-        
-        //通过key获取新闻的数组字典
-        NSArray *dicArray = [dic objectForKey:key];
-        
-       // NSLog(@"%@",dicArray);
-        
-        
-        
-    } andFailture:^(NSError *error) {
-        
-         NSLog(@"%@", error);
     }];
     
     
-    
-}
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    
+    return self.newsModelArray.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+   
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    VVNewsModel *model = self.newsModelArray[indexPath.row];
+    
+    cell.textLabel.text = model.title;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
