@@ -29,6 +29,8 @@
 - (void)setupTableView {
     
     [self.tableView registerNib:[UINib nibWithNibName:@"BaseCell" bundle:nil] forCellReuseIdentifier:@"baseCell"];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"BigImageCell" bundle:nil] forCellReuseIdentifier:@"bigImageCell"];
 }
 
 - (void)setUrlStr:(NSString *)urlStr {
@@ -60,9 +62,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
    
-    VVNewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"baseCell" forIndexPath:indexPath];
-    
+
     VVNewsModel *model = self.newsModelArray[indexPath.row];
+    
+    VVNewsTableViewCell *cell;
+    
+    if (model.imgType) {
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:@"bigImageCell" forIndexPath:indexPath];
+        
+    } else {
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:@"baseCell" forIndexPath:indexPath];
+    }
     
     cell.newsModel = model;
     
@@ -71,7 +83,18 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return 80;
+    VVNewsModel *model = self.newsModelArray[indexPath.row];
+    
+    if (model.imgType) {
+       
+        //大图cell
+        return 130;
+    } else {
+        
+        //基本cell
+        return 80;
+    }
+    
 }
 
 /*
