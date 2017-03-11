@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		130868E0BCCC30021226D18A /* libPods-网易新闻.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 102D975851FB11828CE4061D /* libPods-网易新闻.a */; };
 		B259D5811E737DD000048AFB /* VVNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B259D5801E737DD000048AFB /* VVNewsModel.m */; };
+		B259D5841E741FBF00048AFB /* VVNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B259D5831E741FBF00048AFB /* VVNewsTableViewCell.m */; };
+		B259D5861E74212C00048AFB /* BaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B259D5851E74212C00048AFB /* BaseCell.xib */; };
 		B2833FF01E701D2300C5DE57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2833FEF1E701D2300C5DE57 /* main.m */; };
 		B2833FF31E701D2300C5DE57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2833FF21E701D2300C5DE57 /* AppDelegate.m */; };
 		B2833FF91E701D2300C5DE57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2833FF71E701D2300C5DE57 /* Main.storyboard */; };
@@ -27,6 +29,9 @@
 		102D975851FB11828CE4061D /* libPods-网易新闻.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-网易新闻.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B259D57F1E737DD000048AFB /* VVNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVNewsModel.h; sourceTree = "<group>"; };
 		B259D5801E737DD000048AFB /* VVNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVNewsModel.m; sourceTree = "<group>"; };
+		B259D5821E741FBF00048AFB /* VVNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVNewsTableViewCell.h; sourceTree = "<group>"; };
+		B259D5831E741FBF00048AFB /* VVNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVNewsTableViewCell.m; sourceTree = "<group>"; };
+		B259D5851E74212C00048AFB /* BaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseCell.xib; sourceTree = "<group>"; };
 		B2833FEB1E701D2300C5DE57 /* 网易新闻.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "网易新闻.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2833FEF1E701D2300C5DE57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2833FF11E701D2300C5DE57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -171,6 +176,9 @@
 				B29AE2C01E72CF8700331A60 /* VVChannelLable.m */,
 				B29AE2C51E72DFE500331A60 /* VVNewsCollectionViewCell.h */,
 				B29AE2C61E72DFE500331A60 /* VVNewsCollectionViewCell.m */,
+				B259D5821E741FBF00048AFB /* VVNewsTableViewCell.h */,
+				B259D5831E741FBF00048AFB /* VVNewsTableViewCell.m */,
+				B259D5851E74212C00048AFB /* BaseCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -256,6 +264,7 @@
 			files = (
 				B2833FFE1E701D2300C5DE57 /* LaunchScreen.storyboard in Resources */,
 				B2833FFB1E701D2300C5DE57 /* Assets.xcassets in Resources */,
+				B259D5861E74212C00048AFB /* BaseCell.xib in Resources */,
 				B29AE2BB1E72904400331A60 /* topic_news.json in Resources */,
 				B2833FF91E701D2300C5DE57 /* Main.storyboard in Resources */,
 			);
@@ -316,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B259D5841E741FBF00048AFB /* VVNewsTableViewCell.m in Sources */,
 				B29AE2C71E72DFE500331A60 /* VVNewsCollectionViewCell.m in Sources */,
 				B29AE2C41E72DE4900331A60 /* VVNewsController.m in Sources */,
 				B29AE2D11E72E81600331A60 /* VVNetworkTools.m in Sources */,

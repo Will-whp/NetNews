@@ -9,6 +9,7 @@
 #import "VVNewsController.h"
 #import "VVNetworkTools.h"
 #import "VVNewsModel.h"
+#import "VVNewsTableViewCell.h"
 
 @interface VVNewsController ()
 
@@ -27,7 +28,7 @@
 
 - (void)setupTableView {
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"BaseCell" bundle:nil] forCellReuseIdentifier:@"baseCell"];
 }
 
 - (void)setUrlStr:(NSString *)urlStr {
@@ -59,15 +60,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    VVNewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"baseCell" forIndexPath:indexPath];
     
     VVNewsModel *model = self.newsModelArray[indexPath.row];
     
-    cell.textLabel.text = model.title;
+    cell.newsModel = model;
     
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 80;
+}
 
 /*
 // Override to support conditional editing of the table view.

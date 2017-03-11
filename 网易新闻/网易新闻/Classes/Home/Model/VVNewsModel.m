@@ -33,8 +33,8 @@
         NSArray *modelArray = [NSArray yy_modelArrayWithClass:[VVNewsModel class] json:dicArray];
         
         //回调模型数据, AFN回调主线程给你进行回调的
-        NSLog(@"当前线程%@",[NSThread currentThread])
-        ;
+        NSLog(@"当前线程%@",[NSThread currentThread]);
+        
         
         completionBlock(modelArray);
         
