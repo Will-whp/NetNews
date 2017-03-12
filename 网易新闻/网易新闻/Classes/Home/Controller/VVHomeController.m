@@ -26,6 +26,9 @@
 //频道数据源
 @property (nonatomic,strong) NSArray *channelModelData;
 
+//记录频道lable
+@property (nonatomic,strong) NSMutableArray *channelArray;
+
 @end
 
 @implementation VVHomeController
@@ -43,7 +46,11 @@
 
 - (void)requestChannelData {
     
+    //记录频道的数据源
     self.channelModelData = [VVChannelModel getChannelModelData];
+    
+    //初始化频道数组
+    self.channelArray = [NSMutableArray array];
     
 //    for (VVChannelModel *model in modelData) {
 //        
@@ -85,6 +92,9 @@
         //设置tag
         channelLable.tag = i;
         
+        //记录频道lable
+        [self.channelArray addObject:channelLable];
+        
     }
     
     //设置scrollView的滚动范围
@@ -96,11 +106,8 @@
     
 }
 
-//点击频道lable 的手势处理
-- (void)tabGestureChannelLableAction:(UITapGestureRecognizer*)gesture {
-    
-    //获取频道lable
-    VVChannelLable *channelLable = (VVChannelLable*)gesture.view;
+//频道滚动到中心位置
+- (void)scrollviewChannelLable:(VVChannelLable*)channelLable {
     
     //获取频道lable的中心点
     CGFloat channelLableCenterX = channelLable.center.x;
@@ -125,6 +132,57 @@
     
     //让频道scrollView滚动指定位置
     [self.channelScrollView setContentOffset:CGPointMake(contenoffSetx, 0) animated:NO];
+
+    
+}
+
+//新闻滚动结束调用
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    
+    //计算滚动视图的索引
+    NSInteger index = scrollView.contentOffset.x / scrollView.frame.size.width;
+    
+    //根据索引获取频道标签
+    VVChannelLable *channelLable = self.channelArray[index];
+    
+    //调用频道滚到中心位置方法
+    [self scrollviewChannelLable:channelLable];
+    
+    
+}
+
+//点击频道lable 的手势处理
+- (void)tabGestureChannelLableAction:(UITapGestureRecognizer*)gesture {
+    
+    //获取频道lable
+    VVChannelLable *channelLable = (VVChannelLable*)gesture.view;
+    
+    //调用频道滚动到中心位置的方法
+    [self scrollviewChannelLable:channelLable];
+    
+//    //获取频道lable的中心点
+//    CGFloat channelLableCenterX = channelLable.center.x;
+//    
+//    //计算滚到出去的距离
+//    CGFloat contenoffSetx = channelLableCenterX - self.view.frame.size.width * 0.5;
+//    
+//    //最小滚到范围
+//    CGFloat contenoffSetMinX = 0;
+//    
+//    //最大滚到范围
+//    CGFloat contenoffSetMaxX = self.channelScrollView.contentSize.width - self.view.frame.size.width;
+//    
+//    if (contenoffSetx < contenoffSetMinX) {
+//        
+//        contenoffSetx = contenoffSetMinX;
+//    }
+//    if (contenoffSetx > contenoffSetMaxX) {
+//        
+//        contenoffSetx = contenoffSetMaxX;
+//    }
+//    
+//    //让频道scrollView滚动指定位置
+//    [self.channelScrollView setContentOffset:CGPointMake(contenoffSetx, 0) animated:NO];
     
     //创建滚动的indexpath
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:channelLable.tag inSection:0];
