@@ -95,6 +95,12 @@
         //记录频道lable
         [self.channelArray addObject:channelLable];
         
+        //表示头条新闻
+        if (i == 0) {
+            
+            channelLable.scalePercent = 1;
+        }
+        
     }
     
     //设置scrollView的滚动范围
@@ -135,8 +141,13 @@
     VVChannelLable *leftLabel = self.channelArray[leftIndex];
     leftLabel.scalePercent = leftPrecent;
     
-    VVChannelLable *rightLael = self.channelArray[rightIndex];
-    rightLael.scalePercent = rightPrecent;
+    //判断最右边label 是否越界
+    if (rightIndex < self.channelArray.count) {
+       
+        VVChannelLable *rightLael = self.channelArray[rightIndex];
+        rightLael.scalePercent = rightPrecent;
+    }
+    
     
 }
 
@@ -222,6 +233,19 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:channelLable.tag inSection:0];
     [self.newsCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
     
+    //遍历频道数组  判读点击频道 在频道数组中查找 找到了放大变红 否则不变
+    //点击了那个频道哪个变红
+    for (VVChannelLable *Label in self.channelArray) {
+        
+        if (channelLable == Label) {
+            
+            Label.scalePercent = 1;
+        } else {
+            
+            Label.scalePercent = 0;
+        }
+        
+    }
     
 }
 
