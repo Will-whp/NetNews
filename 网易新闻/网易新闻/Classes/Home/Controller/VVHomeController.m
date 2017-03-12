@@ -14,10 +14,13 @@
 
 @interface VVHomeController () <UICollectionViewDelegate,UICollectionViewDataSource>
 
+//频道视图
 @property (weak, nonatomic) IBOutlet UIScrollView *channelScrollView;
 
+//新闻视图
 @property (weak, nonatomic) IBOutlet UICollectionView *newsCollectionView;
 
+//布局对象
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *flowLayout;
 
 //频道数据源
@@ -70,6 +73,18 @@
         //添加到视图
         [self.channelScrollView addSubview:channelLable];
         
+        //开启用户交互
+        channelLable.userInteractionEnabled = YES;
+        
+        //创建手势
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tabGestureChannelLableAction:)];
+        
+        //添加手势
+        [channelLable addGestureRecognizer:tapGesture];
+        
+        //设置tag
+        channelLable.tag = i;
+        
     }
     
     //设置scrollView的滚动范围
@@ -78,6 +93,43 @@
     //取消滚动条
     self.channelScrollView.showsVerticalScrollIndicator = NO;
     self.channelScrollView.showsHorizontalScrollIndicator = NO;
+    
+}
+
+//点击频道lable 的手势处理
+- (void)tabGestureChannelLableAction:(UITapGestureRecognizer*)gesture {
+    
+    //获取频道lable
+    VVChannelLable *channelLable = (VVChannelLable*)gesture.view;
+    
+    //获取频道lable的中心点
+    CGFloat channelLableCenterX = channelLable.center.x;
+    
+    //计算滚到出去的距离
+    CGFloat contenoffSetx = channelLableCenterX - self.view.frame.size.width * 0.5;
+    
+    //最小滚到范围
+    CGFloat contenoffSetMinX = 0;
+    
+    //最大滚到范围
+    CGFloat contenoffSetMaxX = self.channelScrollView.contentSize.width - self.view.frame.size.width;
+    
+    if (contenoffSetx < contenoffSetMinX) {
+        
+        contenoffSetx = contenoffSetMinX;
+    }
+    if (contenoffSetx > contenoffSetMaxX) {
+        
+        contenoffSetx = contenoffSetMaxX;
+    }
+    
+    //让频道scrollView滚动指定位置
+    [self.channelScrollView setContentOffset:CGPointMake(contenoffSetx, 0) animated:NO];
+    
+    //创建滚动的indexpath
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:channelLable.tag inSection:0];
+    [self.newsCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+    
     
 }
 
