@@ -10,4 +10,7 @@
 
 @interface VVChannelLable : UILabel
 
+//计算缩放比
+@property (nonatomic,assign)CGFloat scalePercent;
+
 @end

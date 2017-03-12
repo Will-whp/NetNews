@@ -105,6 +105,40 @@
     self.channelScrollView.showsHorizontalScrollIndicator = NO;
     
 }
+//滚动新闻collectionView调用次方法
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    //计算小数索引
+    CGFloat indexF = scrollView.contentOffset.x / scrollView.frame.size.width;
+    
+    //计算整数索引
+    int indexI = scrollView.contentOffset.x / scrollView.frame.size.width;
+    
+    //获取百分比
+    CGFloat precent = indexF - indexI;
+    
+    //计算左边本分比
+    CGFloat leftPrecent = 1 - precent;
+    
+    //计算右边百分比
+    CGFloat rightPrecent = precent;
+    
+    NSLog(@"左边: %f,右边: %f", leftPrecent, rightPrecent);
+    
+    //计算左边索引
+    int leftIndex = indexI;
+    
+    //计算右边索引
+    int rightIndex = indexI + 1;
+    
+    //根据索引获得标签
+    VVChannelLable *leftLabel = self.channelArray[leftIndex];
+    leftLabel.scalePercent = leftPrecent;
+    
+    VVChannelLable *rightLael = self.channelArray[rightIndex];
+    rightLael.scalePercent = rightPrecent;
+    
+}
 
 //频道滚动到中心位置
 - (void)scrollviewChannelLable:(VVChannelLable*)channelLable {

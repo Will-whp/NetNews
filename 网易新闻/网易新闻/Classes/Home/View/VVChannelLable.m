@@ -10,12 +10,16 @@
 
 @implementation VVChannelLable
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)setScalePercent:(CGFloat)scalePercent {
+    
+    _scalePercent = scalePercent;
+    
+    //设置颜色
+    self.textColor = [UIColor colorWithRed:scalePercent green:0 blue:0 alpha:1];
+    
+    //设置缩放比
+    CGFloat currentScalePrecent = 1 + scalePercent *0.3;
+    self.transform = CGAffineTransformMakeScale(currentScalePrecent, currentScalePrecent);
+    
 }
-*/
-
 @end
